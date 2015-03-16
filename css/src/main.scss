@@ -2,7 +2,7 @@
 
 // color variables
 $yellow: #F3C25B;
-$teal: #83BAB2;
+$teal: #2FB6E4;
 $green: #8B9E74;
 $red: #831528;
 $grey: #414042;
@@ -36,10 +36,9 @@ header {
 	position: relative;
 	background: url(../img/bg-header.jpg) center center no-repeat;
 	background-size: cover;
-	text-align: right;
-	
-	.wrap {
-		max-width: 900px;
+
+	img {
+		display: block;
 	}
 }
 
@@ -77,10 +76,9 @@ header {
 		background: url(../img/bg-box.png);
 		color: white;
 		padding: 20px 15px 30px;
-		margin-top: 30px;
 		@include font-title;
 
-		button, input[type=submit], .btn {
+		button, input[type=submit], input[type=image], .btn {
 			width: 100%;
 			margin: 0 auto;
 		}
@@ -89,18 +87,29 @@ header {
 			padding: 30px 20px 40px; 
 			border-radius: 20px;
 			font-size: 1.2em;
+			margin-top: 20px;
 		}
 
 		@include respond-to( 1024px ) {
 			padding: 40px;
+			margin-top: 40px;
 		}
 	}
 
 	.half.right.first {
-		padding: 30px 10px;
+		padding: 30px 10px 0;
+	
+		@include respond-to( 768px ) {
+			padding: 30px 10px 130px;
+		}
+	}
 
-		@include respond-to( 1024px ) {
-			padding: 30px;
+	.corner {
+		@include respond-to( 768px ) {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			max-width: 50%;
 		}
 	}
 }
@@ -151,14 +160,14 @@ header {
 
 // footer styles
 .footer-bar {
-	border-top: 10px solid $grey;
+	border-top: 10px solid $teal;
 	color: $grey;
 	padding: 30px 20px;
 	text-align: center;
 
 	h2, h4 {
 		&, a {
-			color: $red;
+			color: $grey;
 		}
 
 		@include font-title;
@@ -176,10 +185,6 @@ header {
 
 	.sixty, .fourty {
 		text-align: center;
-	}
-
-	@include respond-to( 768px ) {
-		margin-top: 30px;
 	}
 
 	.half.separator {
