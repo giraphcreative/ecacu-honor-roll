@@ -53,16 +53,6 @@ header {
 
 
 
-// padding div that'll resize for larger screens.
-.pad {
-	padding: 30px 20px;
-
-	@include respond-to( 768px ) { padding: 30px 50px; }
-	@include respond-to( 1025px ) { padding: 40px 70px; }
-}
-
-
-
 // tool styles
 .tool {
 	padding: 0;
@@ -120,38 +110,21 @@ header {
 .results {
 	display: none;
 	text-align: center;
-	@extend .pad;
+	padding: 30px 20px;
+
+	@include respond-to( 768px ) { padding: 30px 80px; }
+	@include respond-to( 1025px ) { padding: 40px 200px; }
 
 	// large title
 	h2 {
 		@include font;
-		color: $red;
+		color: $grey;
 		font-size: 1.8em;
-
-		@include respond-to( 768px ) {
-			font-size: 3em;
-			padding: 10px 20px;
-		}
-	}
-
-	h3 {
-		@include font;
-		font-size: 1.5em;
+		line-height: 1.4em;
 
 		@include respond-to( 768px ) {
 			font-size: 2em;
-			padding: 10px 20px;
-		}
-	}
-
-	p {
-		@include font-title;
-		font-size: 1.5em;
-		line-height: 1.5em;
-
-		@include respond-to( 768px ) {
-			font-size: 2em;
-			padding: 50px 20px 10px;
+			padding: 20px;
 		}
 	}
 }
