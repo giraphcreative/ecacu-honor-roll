@@ -1,0 +1,12 @@
+{
+    "name" : "shift-and-go-mobile",
+    "version" : "1.0.0",
+    "devDependencies" : {
+        "grunt" :                       "latest",
+        "grunt-contrib-sass":           "*",
+        "grunt-contrib-uglify":         "*",
+        "grunt-contrib-watch":          "*",
+        "grunt-autoprefixer":           "*",
+        "matchdep":                     "*"
+    }
+}

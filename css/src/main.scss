@@ -1,0 +1,205 @@
+
+
+// color variables
+$yellow: #F3C25B;
+$teal: #83BAB2;
+$green: #8B9E74;
+$red: #831528;
+$grey: #414042;
+
+
+@import "reset";
+
+@import "fonts";
+
+@import "mixins";
+
+@import "base";
+
+@import "grid";
+
+
+
+// background-container
+.container {
+	background: white;
+	padding-bottom: 40px;
+
+	@include respond-to( 1220px ) {
+		padding-bottom: 20px;
+	}
+}
+
+
+// header styles
+header {
+	position: relative;
+	background: url(../img/bg-header.jpg) center center no-repeat;
+	background-size: cover;
+	text-align: right;
+	
+	.wrap {
+		max-width: 900px;
+	}
+}
+
+
+// wrap div
+.wrap {
+	max-width: 1100px;
+	margin: 0 auto;
+	position: relative;
+	@include clearfix;
+}
+
+
+
+// padding div that'll resize for larger screens.
+.pad {
+	padding: 30px 20px;
+
+	@include respond-to( 768px ) { padding: 30px 50px; }
+	@include respond-to( 1025px ) { padding: 40px 70px; }
+}
+
+
+
+// tool styles
+.tool {
+	padding: 0;
+	text-align: center;
+	
+	@include respond-to( 768px ) {
+		padding: 20px 40px;
+	}
+
+	.calculator {
+		background: url(../img/bg-box.png);
+		color: white;
+		padding: 20px 15px 30px;
+		margin-top: 30px;
+		@include font-title;
+
+		button, input[type=submit], .btn {
+			width: 100%;
+			margin: 0 auto;
+		}
+		
+		@include respond-to( 768px ) { 
+			padding: 30px 20px 40px; 
+			border-radius: 20px;
+			font-size: 1.2em;
+		}
+
+		@include respond-to( 1024px ) {
+			padding: 40px;
+		}
+	}
+
+	.half.right.first {
+		padding: 30px 10px;
+
+		@include respond-to( 1024px ) {
+			padding: 30px;
+		}
+	}
+}
+
+
+
+// results styles
+.results {
+	display: none;
+	text-align: center;
+	@extend .pad;
+
+	// large title
+	h2 {
+		@include font;
+		color: $red;
+		font-size: 1.8em;
+
+		@include respond-to( 768px ) {
+			font-size: 3em;
+			padding: 10px 20px;
+		}
+	}
+
+	h3 {
+		@include font;
+		font-size: 1.5em;
+
+		@include respond-to( 768px ) {
+			font-size: 2em;
+			padding: 10px 20px;
+		}
+	}
+
+	p {
+		@include font-title;
+		font-size: 1.5em;
+		line-height: 1.5em;
+
+		@include respond-to( 768px ) {
+			font-size: 2em;
+			padding: 50px 20px 10px;
+		}
+	}
+}
+
+
+
+// footer styles
+.footer-bar {
+	border-top: 10px solid $grey;
+	color: $grey;
+	padding: 30px 20px;
+	text-align: center;
+
+	h2, h4 {
+		&, a {
+			color: $red;
+		}
+
+		@include font-title;
+	}
+
+	h2 {
+		font-size: 3em;
+		@include respond-to( 768px ) { font-size: 3.5em; }
+	}
+
+	h4 {
+		font-size: 17px;
+		@include respond-to( 800px ) { font-size: 26px; }
+	}
+
+	.sixty, .fourty {
+		text-align: center;
+	}
+
+	@include respond-to( 768px ) {
+		margin-top: 30px;
+	}
+
+	.half.separator {
+		@include respond-to( 768px ) {
+			width: 46.5%;
+		}
+	}
+}
+
+
+
+.fine-print {
+	padding: 20px 0 0;
+	font-size: .85em;
+	line-height: 1.3em;
+	text-align: left;
+
+	img {
+		float: right;
+		margin: 0 0 15px 15px;
+	}
+}
+

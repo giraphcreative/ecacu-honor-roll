@@ -1,0 +1,56 @@
+
+// include our fonts
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,400,700);
+
+
+// title font face
+@font-face {
+    font-family: 'Eveleth Regular';
+    src: url('fonts/EvelethRegular-webfont.eot');
+    src: url('fonts/EvelethRegular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/EvelethRegular-webfont.woff') format('woff'),
+         url('fonts/EvelethRegular-webfont.ttf') format('truetype'),
+         url('fonts/EvelethRegular-webfont.svg#eveleth_regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+// title (thin) font face
+@font-face {
+    font-family: 'Eveleth Thin';
+    src: url('fonts/EvelethThin-webfont.eot');
+    src: url('fonts/EvelethThin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/EvelethThin-webfont.woff') format('woff'),
+         url('fonts/EvelethThin-webfont.ttf') format('truetype'),
+         url('fonts/EvelethThin-webfont.svg#eveleth_thin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+// sans-serif mixin
+@mixin font-title {
+    font-family: "Eveleth Regular", sans-serif;
+    font-weight: 400;
+}
+
+
+// sans-serif mixin
+@mixin font-title-light {
+    font-family: "Eveleth Thin", sans-serif;
+    font-weight: 400;
+}
+
+
+// sans-serif mixin
+@mixin font {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+}
+
+
+// bold face
+@mixin font-bold {
+	font-weight: 700;
+}
